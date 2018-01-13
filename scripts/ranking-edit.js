@@ -33,15 +33,7 @@ function doDragDropRankEdit(qID, showpopups, samechoiceheight, samelistheight) {
   // Add connected sortables elements to the question
   // Actually a table : move it to a list is a good idea, but need reviewing template a lot.
   var htmlCode = '<div class="dragDropTable" aria-hidden="true"> \
-      <div class="columns2">\
-        <strong class="SortableTitle">'+aRankingTranslations.choicetitle+'</strong>\
-        <div class="ui-state-default dragDropChoices"> \
-          <ul id="sortable-choice-'+qID+'" class="connectedSortable'+qID+' dragDropChoiceList"> \
-            <li>'+aRankingTranslations.choicetitle+'</li> \
-          </ul> \
-        </div> \
-      </div>\
-      <div class="columns2">\
+      <div class="columns1">\
         <strong class="SortableTitle">'+aRankingTranslations.ranktitle+'</strong>\
         <div class="ui-state-default dragDropRanks"> \
           <ol id="sortable-rank-'+qID+'" class="connectedSortable'+qID+' dragDropRankList selectionSortable"> \
@@ -49,6 +41,14 @@ function doDragDropRankEdit(qID, showpopups, samechoiceheight, samelistheight) {
           </ol> \
         </div> \
       </div> \
+      <div class="columns1">\
+        <strong class="SortableTitle">'+aRankingTranslations.choicetitle+'</strong>\
+        <div class="ui-state-default dragDropChoices"> \
+          <ul id="sortable-choice-'+qID+'" class="connectedSortable'+qID+' dragDropChoiceList"> \
+            <li>'+aRankingTranslations.choicetitle+'</li> \
+          </ul> \
+        </div> \
+      </div>\
     </div>';
   $(htmlCode).insertAfter('#question'+qID+' .answers-list');
   $('#sortable-choice-'+qID+' li, #sortable-rank-'+qID+' li').remove();
@@ -96,7 +96,7 @@ function doDragDropRankEdit(qID, showpopups, samechoiceheight, samelistheight) {
     }
   }).disableSelection();
   // Adapt choice and list height
-  fixChoiceListHeight(qID,samechoiceheight,samelistheight);
+  fixChoiceListHeightEdit(qID,samechoiceheight,samelistheight);
   // Allow users to double click to move to selections from list to list
     $('#sortable-choice-'+qID).delegate('li','dblclick', function() {
       maxanswers=parseInt($("#ranking-"+qID+"-maxans").text().trim(),10);
@@ -118,7 +118,7 @@ function doDragDropRankEdit(qID, showpopups, samechoiceheight, samelistheight) {
       updateDragDropRank(qID);
     });
   $(function() { // Update height for IE7, maybe for other function too
-    fixChoiceListHeight(qID,samechoiceheight,samelistheight);
+    fixChoiceListHeightEdit(qID,samechoiceheight,samelistheight);
   });
   }
 
@@ -201,7 +201,7 @@ function loadDragDropRank(qID){
  * @param {bool} samechoiceheight
  * @param {bool} samelistheight
  */
-function fixChoiceListHeight(qID,samechoiceheight,samelistheight){
+function fixChoiceListHeightEdit(qID,samechoiceheight,samelistheight){
   if(samechoiceheight)
   {
     var maxHeight=0;
@@ -210,7 +210,7 @@ function fixChoiceListHeight(qID,samechoiceheight,samelistheight){
         maxHeight=$(this).actual('height');
       }
     });
-    $('.connectedSortable'+qID+' li').css('min-height',maxHeight+'px');
+    // $('.connectedSortable'+qID+' li').css('min-height',maxHeight+'px');
   }
   if(samelistheight)
   {
@@ -218,6 +218,7 @@ function fixChoiceListHeight(qID,samechoiceheight,samelistheight){
     $('.connectedSortable'+qID+' li').each(function(){
       totalHeight=totalHeight+$(this).actual('outerHeight',{includeMargin:true});;
     });
-    $('.connectedSortable'+qID).css('min-height',totalHeight+'px');
+    // use this one...
+    // $('.connectedSortable'+qID).css('min-height',totalHeight+'px');
   }
 }

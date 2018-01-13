@@ -5,8 +5,8 @@
 .ranking-answers{width:100%;}
 .dragDropTable {width: 100%;}
 .dragDropTable .SortableTitle{display:block}
-.dragDropTable .columns2{width:50%;float:left;margin:0;padding:0;}
-:dir(rtl) .dragDropTable .columns2{float:right}
+.dragDropTable .columns1{width:100%;float:left;margin:0;padding:0;}
+:dir(rtl) .dragDropTable .columns1{float:right}
 .dragDropTable .clear{clear:both}
 
 
@@ -36,6 +36,9 @@
     cursor: move;
     clear:both;
     background-image: none;
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
 }
 .dragDropTable ul.dragDropChoiceList li.ui-sortable-placeholder,
 .dragDropTable ol.dragDropRankList li.ui-sortable-placeholder {
