@@ -33,10 +33,12 @@
             <filename>css/flat_and_modern.css</filename>
 
             <filename>css/template.css</filename>
+            <filename>css/ranking-edit.css</filename>
         </css>
         <js>
             <filename>scripts/template.js</filename>
             <filename>scripts/bootstrap-slider.js</filename>
+            <filename>scripts/ranking-edit.js</filename>
         </js>
         <print_css>
             <filename>css/print_template.css</filename>

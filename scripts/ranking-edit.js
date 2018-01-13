@@ -9,7 +9,7 @@
  *
  * @param {number} qId The qid of the question where apply.
  */
-function doDragDropRank(qID, showpopups, samechoiceheight, samelistheight) {
+function doDragDropRankEdit(qID, showpopups, samechoiceheight, samelistheight) {
 // TODO : advanced setting in attributes
   console.log("original dDDR");
   if (typeof showpopups === 'undefined'){showpopups=true;}

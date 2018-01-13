@@ -62,7 +62,7 @@
          rankhelp: '<?php echo $rank_help;?>'
         };
 
-    doDragDropRank(<?php echo $rankId; ?>, <?php echo $showpopups;?>,<?php echo $samechoiceheight;?>,<?php echo $samelistheight;?>);
+    doDragDropRankEdit(<?php echo $rankId; ?>, <?php echo $showpopups;?>,<?php echo $samechoiceheight;?>,<?php echo $samelistheight;?>);
     -->
 </script>
 <!-- end of answer -->
