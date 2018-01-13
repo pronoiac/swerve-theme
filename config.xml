@@ -102,7 +102,7 @@
             In application/config/config.php, find :     'config'=>array
             and add this line in it : 'allow_templates_to_overwrite_views'=>1
         -->
-        <overwrite_question_views>false</overwrite_question_views>
+        <overwrite_question_views>true</overwrite_question_views>
 
         <!-- Asset manager will copy the whole template directory to tmp. So it's possible to refer any file in the files directory in CSS via relative path (e.g: '../files/foo.jpg')   -->
         <filesdirectory>files</filesdirectory>
