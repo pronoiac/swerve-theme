@@ -6,6 +6,9 @@ This modifies the Default [LimeSurvey](https://www.limesurvey.org/) layout a bit
 ### What's different from the Default theme?
 The questions with rankings have a new layout: your selections at the top, with the choices below, in columns.
 
+## What does it look like?
+![swerve screenshot](https://user-images.githubusercontent.com/171153/35495018-77b82b48-0473-11e8-9a81-c3bc1871dbee.png)
+
 ## Installation
 One could use the LimeSurvey interface or put the files into place.
 
