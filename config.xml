@@ -8,16 +8,16 @@
 <config>
     <!-- Those metadatas will be display in the template configuration page. They are not used for now. -->
     <metadatas>
-        <name>Default</name>
-        <creationDate>08/01/2016</creationDate>
-        <author>Louis-Sébastien Gac Artigas</author>
-        <authorEmail>louis.gac@limesurvey.org</authorEmail>
+        <name>Swerve</name>
+        <creationDate>2018-01-13</creationDate>
+        <author>James Young, based on work by Louis-Sébastien Gac Artigas</author>
+        <authorEmail>pronoiac@gmail.com</authorEmail>
         <authorUrl>http://www.limesurvey.org</authorUrl>
         <copyright>Copyright (C) 2005 - 2016 LimeSurvey Gmbh, Inc. All rights reserved.</copyright>
         <license>GNU General Public License version 2 or later</license>
         <version>1.0</version>
-        <description>Default LimeSurvey Template.</description>
-        <last_update>2016-05-13 10:46:00</last_update>
+        <description>Slightly modified Default LimeSurvey Template, with mods for ranking.</description>
+        <last_update>2018-01-13 10:46:00</last_update>
     </metadatas>
 
     <!--
