@@ -16,13 +16,14 @@ function doDragDropRankEdit(qID, showpopups, samechoiceheight, samelistheight) {
   if (typeof samelistheight === 'undefined'){ samelistheight=true;}
   var maxanswers= parseInt($("#ranking-"+qID+"-maxans").text().trim(),10);// We need to test it each time : because it can be dynamic
   var rankingname= "javatbd"+$("#ranking-"+qID+"-name").text().trim();
+  var rankhelp = "Double-click or drag-and-drop items in the bottom list to move them to the top - your highest ranking item should be on the top left, moving through to the right for your lowest ranking item.";
   var rankingnamewidth=rankingname.length;
   //Add a class to the question
   $('#question'+qID+'').addClass('dragDropRanking');
   // Hide the default answers list but display for media oral or screen reader
   $('#question'+qID+' .answers-list').addClass("hide");
   // We are in javascript, then default tip can be replaced
-  $('#question'+qID+' .em_default').html("<div class='hide'>"+$('#question'+qID+' .em_default').html()+"</div><div aria-hidden='true'>"+aRankingTranslations.rankhelp+"</div>");
+  $('#question'+qID+' .em_default').html("<div class='hide'>"+$('#question'+qID+' .em_default').html()+"</div><div aria-hidden='true'>"+rankhelp+"</div>");
   $('#question'+qID+' .answers-list').on("change",".select-item",{source:false},function(event,data){
     data = data || event.data;
     if(data.source!='dragdrop')
