@@ -11,7 +11,6 @@
  */
 function doDragDropRankEdit(qID, showpopups, samechoiceheight, samelistheight) {
 // TODO : advanced setting in attributes
-  console.log("original dDDR");
   if (typeof showpopups === 'undefined'){showpopups=true;}
   if (typeof samechoiceheight === 'undefined'){samechoiceheight=true;}
   if (typeof samelistheight === 'undefined'){ samelistheight=true;}
